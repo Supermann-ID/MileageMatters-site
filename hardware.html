@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recommended OBD-II Adapters — Mileage Matters</title>
-<meta name="description" content="Compatible OBD-II adapters for automatic odometer capture with Mileage Matters iOS app.">
+<title>How Tracking Works — Mileage Matters</title>
+<meta name="description" content="How Mileage Matters detects trips with GPS, Core Motion, and optional car Bluetooth vehicle recognition. Setup tips for permissions and pairing.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,9 +17,9 @@
     </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="hardware.html" class="active">Hardware</a>
+      <a href="hardware.html" class="active">How it works</a>
       <a href="support.html">Support</a>
-      <a href="https://supermann-id.github.io/mileage-tracker-privacy/privacy-policy.html">Privacy</a>
+      <a href="privacy-policy.html">Privacy</a>
     </div>
   </div>
 </nav>
@@ -27,97 +27,75 @@
 <div class="container-narrow">
 
   <section>
-    <span class="eyebrow">Recommended Hardware</span>
-    <h1>OBD-II adapters for Mileage Matters.</h1>
-    <p class="lede">GPS-only tracking is accurate to within a few hundred feet. An OBD-II adapter reads your car's real odometer, giving you audit-proof mileage records for every trip.</p>
+    <span class="eyebrow">How it works</span>
+    <h1>GPS distance. Smart auto-start.</h1>
+    <p class="lede">Mileage Matters measures every trip with GPS. Optional car Bluetooth pairing helps the app recognize your vehicle and auto-start tracking — it does not read an odometer or require any plug-in adapter.</p>
+  </section>
 
-    <div class="disclosure">
-      <strong>Affiliate disclosure:</strong> As an Amazon Associate, Ridgeline Digital LLC earns from qualifying purchases made through links on this page. This helps fund development of Mileage Matters at no extra cost to you.
+  <section>
+    <h2>What powers each trip</h2>
+
+    <div class="feature-grid" style="margin-top: 24px;">
+
+      <div class="feature-card">
+        <div class="feature-icon">📍</div>
+        <h3>GPS distance</h3>
+        <p>Trip miles are derived from GPS location samples on your iPhone. That distance is what appears on trip cards and in IRS exports.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🏃</div>
+        <h3>Core Motion</h3>
+        <p>Apple's motion APIs help classify when you are driving so the app can wake and start a trip without you tapping Start.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎧</div>
+        <h3>Car Bluetooth</h3>
+        <p>Pair your vehicle's stereo or hands-free Bluetooth once. When your phone connects to that device, Mileage Matters can recognize the configured vehicle and help auto-start.</p>
+      </div>
+
     </div>
   </section>
 
   <section>
-    <h2>What to look for</h2>
-    <p>Mileage Matters supports <strong>Bluetooth Low Energy (BLE) OBD-II adapters</strong>. These plug into the OBD-II port under your dashboard and talk to your iPhone over Bluetooth. Any adapter that supports the ELM327 command set works.</p>
+    <h2>Setup tips</h2>
 
     <div class="info-box">
-      <h3>⚠️ A note on compatibility</h3>
-      <p style="margin-bottom: 0;">Not every OBD-II adapter works with iPhone. The ones below have been tested with Mileage Matters on iOS 17+ and reliably deliver odometer readings. <strong>Wi-Fi-only adapters won't work</strong> — iOS requires BLE or MFi-certified Bluetooth Classic.</p>
+      <h3>1. Grant Location (Always) and Motion</h3>
+      <p style="margin-bottom: 0;">Automatic detection needs <strong>Always</strong> location authorization so iOS can wake the app in the background. Motion access improves driving classification. You can change either later in iOS Settings.</p>
     </div>
 
     <div class="info-box">
-      <h3>🔌 Where to find your OBD-II port</h3>
-      <p style="margin-bottom: 0;">Almost every car made after 1996 has one. It's usually under the driver-side dashboard, near the steering column or down by your left knee. Looks like a 16-pin trapezoid. Most plug in without tools in under 10 seconds.</p>
+      <h3>2. Pair your car's Bluetooth (optional)</h3>
+      <p style="margin-bottom: 0;">In the app, open your vehicle and pair the Bluetooth device your iPhone already uses for audio or calls — typically the car stereo or hands-free profile. Mileage Matters uses that connection for <strong>vehicle recognition and auto-start</strong>, not for reading odometer data.</p>
     </div>
-  </section>
 
-  <section>
-    <h2>Recommended adapters</h2>
-
-    <div class="product-list">
-
-      <div class="product-card">
-        <span class="badge recommended">Top pick</span>
-        <h3>OBDLink MX+</h3>
-        <p class="model">Bluetooth · MFi-certified for iOS</p>
-        <p class="description">The gold standard for iPhone OBD-II. Fast, reliable connection, works with every car we've tested, and the included OBDLink app is great for diagnostics beyond mileage. Pricier but worth it if you'll use it daily.</p>
-        <p class="price">~$120</p>
-        <a href="https://www.amazon.com/dp/B01IC28IREPLACE?tag=YOURAMAZONTAG-20" class="button button-primary" target="_blank" rel="noopener">View on Amazon →</a>
-      </div>
-
-      <div class="product-card">
-        <span class="badge recommended">Great value</span>
-        <h3>Vgate iCar Pro BLE 4.0</h3>
-        <p class="model">Bluetooth LE · iOS compatible</p>
-        <p class="description">A solid mid-range option that works well with Mileage Matters. Slightly slower to connect than the OBDLink but reliably delivers odometer readings on most vehicles.</p>
-        <p class="price">~$40</p>
-        <a href="https://www.amazon.com/dp/B07D2B5TZ3REPLACE?tag=YOURAMAZONTAG-20" class="button button-primary" target="_blank" rel="noopener">View on Amazon →</a>
-      </div>
-
-      <div class="product-card">
-        <span class="badge budget">Budget pick</span>
-        <h3>Veepeak OBDCheck BLE</h3>
-        <p class="model">Bluetooth LE · iOS compatible</p>
-        <p class="description">The most affordable adapter we can recommend. Works on most vehicles but may take a few extra seconds to hand off the odometer reading at trip start. Mileage Matters's back-dating logic handles this — you won't lose miles.</p>
-        <p class="price">~$25</p>
-        <a href="https://www.amazon.com/dp/B01MV3LPBHREPLACE?tag=YOURAMAZONTAG-20" class="button button-primary" target="_blank" rel="noopener">View on Amazon →</a>
-      </div>
-
+    <div class="info-box">
+      <h3>3. Drive, then classify</h3>
+      <p style="margin-bottom: 0;">Trips save with GPS-derived distance. Swipe or bulk-classify as Business, Medical, Charity, or Personal, then export CSV, PDF, or HTML when you need records for your CPA.</p>
     </div>
-  </section>
-
-  <section>
-    <h2>Setting up your adapter</h2>
-    <ol style="padding-left: 22px;">
-      <li style="margin-bottom: 12px;"><strong>Plug it in.</strong> Find your OBD-II port (usually under the driver-side dash). Plug the adapter in with the car's ignition on.</li>
-      <li style="margin-bottom: 12px;"><strong>Pair from Mileage Matters.</strong> Open the app → Vehicles tab → tap your vehicle → <em>Scan for OBD Adapter</em>. The adapter will show up in the scan sheet within a few seconds.</li>
-      <li style="margin-bottom: 12px;"><strong>Tap to connect.</strong> Mileage Matters remembers the adapter — next time you drive, it connects automatically.</li>
-      <li style="margin-bottom: 12px;"><strong>Look for the green "OBD" badge.</strong> On each trip card, you'll see a small badge next to the mileage. Green "OBD" means real odometer reading; gray "GPS" means GPS-only. If you see an orange "GPS" warning, your adapter was configured but didn't respond — check the connection.</li>
-    </ol>
   </section>
 
   <section>
     <h2>Frequently asked questions</h2>
 
-    <h3 style="margin-top: 24px;">Will this drain my car's battery?</h3>
-    <p>Modern OBD-II adapters draw a tiny amount of current (&lt;10 mA), but if you leave your car parked for weeks, you'll want to unplug it. For daily drivers it's fine to leave in.</p>
+    <h3 style="margin-top: 24px;">Do I need any hardware?</h3>
+    <p>No. Your iPhone is enough. Car Bluetooth pairing is optional and uses the stereo or hands-free profile you already have — there is nothing extra to buy or plug in under the dash.</p>
 
-    <h3 style="margin-top: 24px;">Will this void my warranty or trigger a check engine light?</h3>
-    <p>No. OBD-II is a read-only protocol for mileage queries — Mileage Matters doesn't write anything to your car's computer. Plugging in an adapter is explicitly permitted by federal law (Clean Air Act) for emissions diagnostics and fleet tools.</p>
+    <h3 style="margin-top: 24px;">Is distance from the car's odometer?</h3>
+    <p>No. Distance is GPS-derived only. Bluetooth is used only to recognize a configured vehicle and help start trips automatically.</p>
 
-    <h3 style="margin-top: 24px;">Do I need one to use Mileage Matters?</h3>
-    <p>No. Mileage Matters works great with GPS alone — the trip list, classification, and exports are all identical. The OBD-II adapter is an upgrade for people who want odometer-accurate records rather than GPS-derived distance. For high-volume business drivers, the few percent accuracy difference can be meaningful at tax time.</p>
+    <h3 style="margin-top: 24px;">Will GPS match my dashboard exactly?</h3>
+    <p>Not always. GPS can differ from a mechanical or digital odometer by a small percentage because satellite samples don't capture every curve. That is expected for phone-based mileage tracking.</p>
 
-    <h3 style="margin-top: 24px;">Does it work with Tesla?</h3>
-    <p>Tesla vehicles don't expose odometer data over the standard OBD-II port — you'll want to stick with GPS tracking for a Tesla. Mileage Matters handles this gracefully (the trip just saves with a gray "GPS" badge instead of green "OBD").</p>
-
-    <h3 style="margin-top: 24px;">What about electric and hybrid vehicles?</h3>
-    <p>Most EVs and hybrids other than Tesla expose odometer over OBD-II normally. If you have a specific model you're wondering about, email us and we'll confirm.</p>
+    <h3 style="margin-top: 24px;">What if I don't pair Bluetooth?</h3>
+    <p>You can still use automatic detection via GPS speed and Core Motion. Pairing Bluetooth simply helps the app know which vehicle you're in and improves auto-start reliability.</p>
   </section>
 
   <section>
     <h2>Still have questions?</h2>
-    <p>Email us at <a href="mailto:ridgelinedigitalllc@gmail.com">ridgelinedigitalllc@gmail.com</a> — we're happy to help you pick the right adapter for your setup.</p>
+    <p>Email us at <a href="mailto:ridgelinedigitalllc@gmail.com">ridgelinedigitalllc@gmail.com</a> — we're happy to help with setup.</p>
   </section>
 
 </div>
@@ -126,12 +104,11 @@
   <div class="footer-brand">Ridgeline Digital LLC</div>
   <div>
     <a href="index.html">Home</a> ·
-    <a href="hardware.html">Hardware</a> ·
+    <a href="hardware.html">How it works</a> ·
     <a href="support.html">Support</a> ·
-    <a href="https://supermann-id.github.io/mileage-tracker-privacy/privacy-policy.html">Privacy</a>
+    <a href="privacy-policy.html">Privacy</a>
   </div>
   <div style="margin-top: 14px;">© 2026 Ridgeline Digital LLC. Mileage Matters is a product of Ridgeline Digital LLC.</div>
-  <div style="margin-top: 8px; font-size: 12px; color: var(--text-muted);">As an Amazon Associate, we earn from qualifying purchases.</div>
 </footer>
 
 </body>
