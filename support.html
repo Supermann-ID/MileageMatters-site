@@ -17,9 +17,9 @@
     </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="hardware.html">Hardware</a>
+      <a href="hardware.html">How it works</a>
       <a href="support.html" class="active">Support</a>
-      <a href="https://supermann-id.github.io/mileage-tracker-privacy/privacy-policy.html">Privacy</a>
+      <a href="privacy-policy.html">Privacy</a>
     </div>
   </div>
 </nav>
@@ -36,30 +36,30 @@
     <h2>Getting started</h2>
 
     <h3 style="margin-top: 24px;">How does automatic tracking work?</h3>
-    <p>Mileage Matters listens for three signals that you've started driving: GPS speed over 5 mph, Core Motion's driving classification, and (if configured) connection to a known vehicle Bluetooth or OBD-II adapter. When any of these fire, a trip starts automatically. When you've been stationary for a few minutes or disconnect from your car, the trip ends and saves.</p>
+    <p>Mileage Matters listens for signals that you've started driving: GPS speed, Core Motion's driving classification, and (if configured) connection to a known vehicle Bluetooth device — typically your car's stereo or hands-free profile. When detection fires, a trip starts automatically. When you've been stationary for a few minutes or disconnect from your car, the trip ends and saves. <strong>Distance is always GPS-derived.</strong></p>
 
     <h3 style="margin-top: 24px;">Why do I need to grant "Always" location permission?</h3>
     <p>Automatic trip detection requires the app to wake up in the background when you start driving. iOS only allows this with "Always" location authorization. If you grant only "While Using," you'll have to open the app every time you drive — which defeats the purpose.</p>
 
     <h3 style="margin-top: 24px;">My first few trips were missed — what happened?</h3>
     <p>iOS takes a few days to "learn" your driving patterns and trigger background activation reliably. After your first week with the app, detection becomes much more consistent. You can always add missed trips manually from the <em>+ Add Trip</em> button on the Dashboard.</p>
+
+    <h3 style="margin-top: 24px;">What does car Bluetooth pairing do?</h3>
+    <p>Pairing lets Mileage Matters recognize a configured vehicle when your iPhone connects to that car's Bluetooth audio or hands-free device. It helps with auto-start and knowing which vehicle you're in. It does <strong>not</strong> read odometer data from the car.</p>
   </section>
 
   <section>
-    <h2>Accuracy & OBD-II</h2>
+    <h2>Distance &amp; accuracy</h2>
 
     <h3 style="margin-top: 24px;">GPS says I drove 9.4 miles, but my odometer says 9.7. Which is right?</h3>
-    <p>Your odometer. GPS-derived distance typically under-reports by 1-3% because satellite samples don't capture every curve. This is normal and not a bug — it's the fundamental limit of GPS-based distance measurement. An OBD-II adapter reads your car's actual odometer and eliminates this error.</p>
+    <p>Your dashboard odometer is the car's own measurement. GPS-derived distance typically differs by a small percentage because satellite samples don't capture every curve. This is normal for phone-based mileage tracking — Mileage Matters records GPS distance only.</p>
 
-    <h3 style="margin-top: 24px;">What's the difference between the green "OBD" and gray "GPS" badges on trips?</h3>
-    <p>Trip cards show a small badge next to the mileage indicating the data source. <strong>Green OBD</strong> means the trip distance came from your car's real odometer. <strong>Gray GPS</strong> means GPS-only (either no adapter configured or this particular vehicle doesn't have one set up). <strong>Orange GPS with a warning icon</strong> means an OBD adapter was configured but didn't deliver readings during this trip — check the connection.</p>
-
-    <h3 style="margin-top: 24px;">Which OBD-II adapters are compatible?</h3>
-    <p>See the <a href="hardware.html">recommended hardware page</a> for tested options. In general, any Bluetooth LE adapter supporting the ELM327 command set will work.</p>
+    <h3 style="margin-top: 24px;">Do I need any adapters or special hardware?</h3>
+    <p>No. Your iPhone is enough. Optional Bluetooth pairing uses the stereo or hands-free profile already in your car. See <a href="hardware.html">how tracking works</a> for setup tips.</p>
   </section>
 
   <section>
-    <h2>Classification & reminders</h2>
+    <h2>Classification &amp; reminders</h2>
 
     <h3 style="margin-top: 24px;">How do I classify a trip?</h3>
     <p>Swipe left on a trip card for business actions, swipe right for personal. Or tap the trip to open the editor where you can set category, purpose, and destination in detail. For pending journeys (chains of connected trips), a quick-tap pill lets you classify all legs at once.</p>
@@ -72,10 +72,10 @@
   </section>
 
   <section>
-    <h2>Reports & export</h2>
+    <h2>Reports &amp; export</h2>
 
     <h3 style="margin-top: 24px;">What export formats are available?</h3>
-    <p>CSV (for spreadsheet import or sending to your accountant), PDF report (formatted for filing or records), HTML dashboard (for your own reference). All three include all Publication 463-required fields: date, destination, purpose, category, odometer, miles, expenses.</p>
+    <p>CSV (for spreadsheet import or sending to your accountant), PDF report (formatted for filing or records), and HTML dashboard (for your own reference). Exports include Publication 463-style fields such as date, destination, purpose, category, and miles. Siri shortcuts can help jump into common flows.</p>
 
     <h3 style="margin-top: 24px;">Where do my trip records go if I delete the app?</h3>
     <p>They're gone. All data is stored locally on your device with Core Data. <strong>Before uninstalling, export your records to CSV or PDF.</strong> You can also enable iCloud backup in iOS Settings to preserve app data across reinstalls, subject to Apple's iCloud privacy terms.</p>
@@ -86,7 +86,7 @@
 
   <section>
     <h2>Privacy</h2>
-    <p>Mileage Matters keeps everything on your device. No data is transmitted to any Ridgeline Digital server. The only network calls are to Apple's own MapKit and Geocoding services to display addresses and business names. Full details in the <a href="https://supermann-id.github.io/mileage-tracker-privacy/privacy-policy.html">privacy policy</a>.</p>
+    <p>Mileage Matters keeps trip data on your device. No trip routes or mileage logs are uploaded to Ridgeline Digital LLC servers. Crash reports (Sentry) exclude trip and location data. Optional feedback you send goes through Formspree. Map addresses use Apple MapKit and Geocoding. Full details in the <a href="privacy-policy.html">privacy policy</a>.</p>
   </section>
 
   <section>
@@ -107,9 +107,9 @@
   <div class="footer-brand">Ridgeline Digital LLC</div>
   <div>
     <a href="index.html">Home</a> ·
-    <a href="hardware.html">Hardware</a> ·
+    <a href="hardware.html">How it works</a> ·
     <a href="support.html">Support</a> ·
-    <a href="https://supermann-id.github.io/mileage-tracker-privacy/privacy-policy.html">Privacy</a>
+    <a href="privacy-policy.html">Privacy</a>
   </div>
   <div style="margin-top: 14px;">© 2026 Ridgeline Digital LLC. Mileage Matters is a product of Ridgeline Digital LLC.</div>
 </footer>
